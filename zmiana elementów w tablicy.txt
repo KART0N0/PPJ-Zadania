@@ -1,0 +1,24 @@
+ int[] rra = { 1, 4, 5, 7, 2, 3, 5, 9};
+
+        for(int i=0; i<rra.length; i++){
+            System.out.print(
+                    rra[i]+" "
+            );
+        }
+        System.out.println();
+
+        int tmp = rra[0];
+        rra[0] = rra[1];
+        rra[1] = tmp;
+
+        for(int i=0; i<rra.length; i++){
+            System.out.print(
+                    rra[i]+" "
+            );
+        }
+        System.out.println();
+
+
+
+
+
