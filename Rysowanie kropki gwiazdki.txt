@@ -1,0 +1,31 @@
+  int [] tab4 = new int [(int)(Math.random() * (15 - 10 + 1) + 10)];
+        for(int i = 0; i < tab4.length; i++)
+            tab4[i] = i;
+
+        for(int i = 0; i < tab4.length; i++)
+            System.out.println(i + " " + tab4[i]);
+        int indeks1, indeks2, tmp;
+        for(int i = 0; i < tab4.length; i++){
+            indeks1 = (int)(Math.random() * (tab4.length));
+            indeks2 = (int)(Math.random() * (tab4.length));
+            tmp = tab4[indeks1];
+            tab4[indeks1] = tab4[indeks2];
+            tab4[indeks2] = tmp;
+        }
+
+        for(int i = 0; i < tab4.length; i++)
+            System.out.print(tab4[i] + " ");
+        System.out.println();
+        for(int i = 0; i < tab4.length; i++) {
+            for(int j = 0; j < tab4.length; j++) {
+                if (tab4[j] == i)
+                    System.out.print("*");
+                else
+                    System.out.print(".");
+            }
+            System.out.println();
+        }
+
+
+
+
