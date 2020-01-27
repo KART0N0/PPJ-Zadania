@@ -1,0 +1,29 @@
+FileReader fr = new FileReader("1.txt");
+        StringBuilder sb = new StringBuilder();
+        int tmp = fr.read();
+        while (tmp != -1) {
+            sb.append((char) tmp);
+            tmp = fr.read();
+        }
+        fr.close();
+        String s = sb.toString();
+        Pattern p = Pattern.compile("a");
+        Matcher m = p.matcher(s);
+        while (m.find()) {
+            System.out.print(m.group() + " ");
+            m.find();
+        }
+/*
+a regeks
+
+a? <1 ,0>
+a+ <1, nies)
+a* <0, nies)
+a{4}
+a{4,8}
+a{0,4}
+a{4,}
+[abc][ABC]
+ */
+
+
