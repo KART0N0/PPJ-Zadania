@@ -1,0 +1,20 @@
+ //Zad. 2
+	 System.out.println("165 na binarny " + 0B10100101);
+	 System.out.println("165 na oktalny " + 0245 );
+	 System.out.println("165 na heksacostamdecymalny " + 0XA5 );
+	 //Zad. 3
+	  
+		System.out.println(14);
+		System.out.println( 14 << 2);
+		System.out.println( 56 >>> 4);
+	 // Zad. 4
+		int i = 0B01100;
+	 	int x = 0B01000;
+		System.out.println(i & x);
+	 //Zad. 5
+		int y = 0B11001;
+		int z = 0B10101;
+		System.out.println(y | z);
+
+
+
