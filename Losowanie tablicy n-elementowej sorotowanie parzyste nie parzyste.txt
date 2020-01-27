@@ -1,3 +1,6 @@
+public class Main {
+
+    public static void main(String[] args) {
 double [] tab1 = new double[10];
         for(int i = 0; i < 10; i++)
             tab1[i] = Math.random() * 101;
@@ -11,3 +14,5 @@ double [] tab1 = new double[10];
         for(int i = 0; i < 10; i++)
             if((int)(tab1[i]) % 2 != 0)
                 System.out.println(i + " " + tab1[i]);
+                }
+}
