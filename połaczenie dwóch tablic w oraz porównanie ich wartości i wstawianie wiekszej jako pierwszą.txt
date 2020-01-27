@@ -1,0 +1,53 @@
+int a11 = 5;
+		int a21 = 5;
+		float arr1[] = new float[a11];
+		float arr2[] = new float[a21];
+		
+		for(int i=0; i<arr1.length; i++){
+			 arr1[i] = (float) (Math.random() * 6);	
+			System.out.print(arr1[i] + " ");
+		}
+		System.out.println();
+		for(int i=0; i<arr2.length; i++){
+			 arr2[i] = (float) (Math.random() * 6);	
+			System.out.print(arr2[i] + " ");
+		}
+		System.out.println();
+		int a1 = 0;
+		int a2 = 0;
+		int a3 = 0;
+		float arr3[] = new float[arr1.length + arr2.length];
+		
+		for(int i =0; i<arr3.length; i++){
+		
+			if(arr1.length < arr2.length){
+		if(a1<arr1.length){
+			arr3[a3++] = arr1[a1++];
+				if(a2<arr2.length){
+					arr3[a3++] = arr2[a2++];
+				}
+			}
+		}
+		else if(arr1.length > arr2.length){
+			if(a2<arr2.length){
+			arr3[a3++] = arr1[a2++];
+				 if(a1<arr1.length){
+					arr3[a3++] = arr2[a1++];
+				}
+			}
+		}
+		else if(arr1.length == arr2.length){
+				if(a1<arr1.length){
+			arr3[a3++] = arr1[a1++];
+				 if(a2<arr2.length){
+					arr3[a3++] = arr2[a2++];
+				}
+			}
+			}
+		}
+		for(int i=0; i<arr3.length; i++){
+			System.out.print(arr3[i] + " ");
+		}
+
+
+
