@@ -1,0 +1,33 @@
+String s = "ACCTGAACTCCCCCC";
+	String t = "ACCTAGGACCCCCC";
+ 	Pattern pattern = Pattern.compile("([A,C,T,G])*");
+            Matcher matcher = pattern.matcher("ACCTGAACTCCCCCC");
+
+            System.out.println(matcher.matches());
+
+
+            pattern = Pattern.compile("([A,C,T,G])*");
+            matcher = pattern.matcher("ACCTAGGACCCCCC");
+
+            System.out.println(matcher.matches());
+    	    String s1 = "ZZZZATGGGGGGGTAA";
+            String s2 = "ATGGGGGGGTAA";
+            String s3 = "ATGGGGGGGTAAG";
+            String s4 = "ATGGGGGGGTGA";
+            Pattern pattern = Pattern.compile("(ATG)+[A,C,T,G]*(TAA|TAG|TGA)+");
+            Matcher matcher = pattern.matcher(s1);
+
+            while (matcher.find()) {
+                for (int i = 1; i <= matcher.groupCount(); i++) {
+                    String s = matcher.group(0);
+                    for (int j = 3; j < s.length()-3; j++) {
+                        System.out.print(s.charAt(j));
+                    }
+                }
+            }
+
+
+
+
+
+
