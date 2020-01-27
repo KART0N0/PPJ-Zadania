@@ -1,0 +1,31 @@
+
+import java.util.Random;
+
+public class Main {
+
+    public static void main(String[] args) {
+        char tab[] = new char[3];
+        for(int i = 0; i<tab.length; i++){
+            Random rnd = new Random();
+            tab[i] = (char) (rnd.nextInt(26) + 'a');
+        }
+        for(int i =0; i<tab.length; i++){
+            System.out.print(tab[i] + " ");
+        }
+
+        System.out.println();
+        char tmp = tab[0];
+        for(int i = 0; i<tab.length; i++){
+            if(tmp > tab[i]) {
+                tmp = tab[i];
+            }
+        }
+        System.out.println(tmp);
+    }
+}
+
+
+
+
+
+
